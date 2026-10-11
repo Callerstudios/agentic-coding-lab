@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>TaskFlow</h1>
+      <p>A simple space for your tasks.</p>
+    </header>
+
+    <main>
+      <section class="panel" aria-labelledby="new-task-heading">
+        <h2 id="new-task-heading">New task</h2>
+        <form id="task-form">
+          <label for="task-input">Task description</label>
+          <div class="input-row">
+            <input id="task-input" name="task" type="text" placeholder="What needs to get done?" aria-describedby="form-note task-error">
+            <button type="submit">Add task</button>
+          </div>
+          <p id="form-note" class="muted">Enter a task, then select Add task or press Enter.</p>
+          <p id="task-error" role="alert"></p>
+          <p id="task-status" role="status" aria-atomic="true"></p>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="task-list-heading">
+        <h2 id="task-list-heading">Your tasks</h2>
+        <ul id="task-list" aria-label="Tasks"></ul>
+        <p id="empty-state" class="empty-state">No tasks yet.</p>
+      </section>
+    </main>
+  </body>
+</html>
